@@ -1,0 +1,29 @@
+
+type Query {
+  widget(where: WidgetFilters!): Widget
+}
+
+type Mutation {
+  employeeCreateWidgets(data: EmployeeCreateWidgetArgs!): [Widget]
+}
+
+type Employee {
+  id: Int!
+  name: String!
+}
+
+input WidgetFilters {
+  id: Int
+}
+
+input EmployeeCreateWidgetArgs {
+  employeeId: Int!
+  widgetKindId: Int!
+  dates: [String!]!
+}
+
+type Widget {
+  id: Int!
+  employee: Employee!
+  published: Boolean!
+}

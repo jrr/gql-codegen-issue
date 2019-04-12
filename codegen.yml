@@ -1,0 +1,15 @@
+generates:
+  types.gen.tsx:
+    config:
+      # Todo: Enable this setting once it doesn't cause type errors.
+      noGraphqlTag: false
+      strict: true
+    schema:
+      - "schema.graphql"
+    documents:
+      - "documents/*.graphql"
+    plugins:
+      - typescript:
+      - typescript-operations
+      - typescript-compatibility
+      - typescript-react-apollo

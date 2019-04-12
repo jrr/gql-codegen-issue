@@ -1,0 +1,8 @@
+mutation EmployeeCreateWidgets($data: EmployeeCreateWidgetArgs!) {
+  employeeCreateWidgets(data: $data) {
+    employee {
+      id
+      name
+      }
+    }
+  }
