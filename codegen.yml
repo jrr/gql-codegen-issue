@@ -1,7 +1,6 @@
 generates:
   types.gen.tsx:
     config:
-      # Todo: Enable this setting once it doesn't cause type errors.
       noGraphqlTag: false
       strict: true
     schema:
@@ -11,5 +10,7 @@ generates:
     plugins:
       - typescript:
       - typescript-operations
+      - typescript-react-apollo:
+          withComponent: false
+          withHOC: false
       - typescript-compatibility
-      - typescript-react-apollo
