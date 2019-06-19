@@ -1,5 +1,5 @@
 generates:
-  types.gen.tsx:
+  types.gen.ts:
     config:
       noGraphqlTag: false
       strict: true
@@ -13,4 +13,5 @@ generates:
       - typescript-react-apollo:
           withComponent: false
           withHOC: false
+      - typescript-resolvers
       - typescript-compatibility
